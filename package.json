@@ -1,0 +1,20 @@
+{
+  "name": "first-pkg",
+  "version": "0.0.1",
+  "description": "My first package",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "prepare": "npm run clean && npm run build",
+    "test": "node --test --loader ts-node/esm ./src/*.test.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
